@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AgentAIIDE" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/ai_blue</item>
+        <item name="colorSecondary">@color/code_green</item>
+        <item name="colorError">@color/error_red</item>
+    </style>
+
+    <style name="Theme.AgentAIIDE" parent="Base.Theme.AgentAIIDE" />
+</resources>

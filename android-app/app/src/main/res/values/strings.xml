@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Agent AI IDE</string>
+    <string name="dashboard_title">Agent AI IDE</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="new_project">New Project</string>
+    <string name="code_editor">Code Editor</string>
+    <string name="recent_projects">Recent Projects</string>
+    <string name="view_all">View All</string>
+    <string name="no_projects_yet">No projects yet</string>
+    <string name="create_first_project">Create your first Android project</string>
+    <string name="open_project">Open Project</string>
+    <string name="projects">Projects</string>
+    <string name="project_management_coming_soon">Project management coming soon</string>
+    <string name="ai_code_editor">AI Code Editor</string>
+    <string name="advanced_code_editing">Advanced code editing with Deepseek AI integration</string>
+    <string name="project_setup_wizard">Project Setup Wizard</string>
+    <string name="ai_guided_project_creation">AI-guided Android project creation</string>
+    <string name="create_demo_project">Create Demo Project</string>
+    <string name="back">Back</string>
+</resources>

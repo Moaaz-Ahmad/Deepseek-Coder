@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Test</title>
+</head>
+<body>
+    <h1>Agent AI IDE API Test</h1>
+    
+    <div>
+        <h2>Backend Status:</h2>
+        <div id="status">Checking...</div>
+    </div>
+    
+    <div>
+        <h2>Test Code Generation:</h2>
+        <input type="text" id="prompt" placeholder="Enter prompt" value="Create a simple Android button">
+        <button onclick="testGenerate()">Generate Code</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        // Test backend status
+        async function checkStatus() {
+            try {
+                const response = await fetch('http://localhost:3001/health');
+                const data = await response.json();
+                document.getElementById('status').innerHTML = `✅ Online: ${JSON.stringify(data)}`;
+            } catch (error) {
+                document.getElementById('status').innerHTML = `❌ Offline: ${error.message}`;
+            }
+        }
+        
+        // Test code generation
+        async function testGenerate() {
+            const prompt = document.getElementById('prompt').value;
+            const resultDiv = document.getElementById('result');
+            
+            resultDiv.innerHTML = 'Generating...';
+            
+            try {
+                const response = await fetch('http://localhost:3001/api/deepseek/generate', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        prompt: prompt,
+                        language: 'kotlin',
+                        difficulty: 'beginner'
+                    })
+                });
+                
+                const data = await response.json();
+                resultDiv.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+            } catch (error) {
+                resultDiv.innerHTML = `❌ Error: ${error.message}`;
+            }
+        }
+        
+        // Check status on load
+        checkStatus();
+    </script>
+</body>
+</html>
