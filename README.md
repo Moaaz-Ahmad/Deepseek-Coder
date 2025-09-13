@@ -1,6 +1,18 @@
-# Agent AI IDE
+# 🤖 Agent AI IDE
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Node.js](https://img.shields.io/badge/Node.js-18%2B-green.svg)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-18-blue.svg)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue.svg)](https://www.typescriptlang.org/)
+[![GitHub Stars](https://img.shields.io/github/stars/Moaaz-Ahmad/Deepseek-Coder.svg)](https://github.com/Moaaz-Ahmad/Deepseek-Coder/stargazers)
 
 An intelligent development environment for beginner Android developers, powered by the Deepseek API. This IDE provides AI-assisted coding, natural language to code conversion, intelligent debugging, and comprehensive learning tools.
+
+## 🌟 Live Demo
+
+- **🌐 Frontend Interface**: http://localhost:5173 (after setup)
+- **🔧 Backend API**: http://localhost:3001 (after setup)
+- **📖 API Documentation**: http://localhost:3001/api/docs
 
 ## 🚀 Project Overview
 
