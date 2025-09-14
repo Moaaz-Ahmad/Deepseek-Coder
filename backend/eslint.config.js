@@ -17,6 +17,10 @@ export default tseslint.config(
       ecmaVersion: 2020,
       globals: {
         ...globals.node,
+      },
+      parserOptions: {
+        project: './tsconfig.json',
+        tsconfigRootDir: import.meta.dirname,
       }
     },
     rules: {

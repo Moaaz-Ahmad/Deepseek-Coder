@@ -2,12 +2,6 @@
 import dotenv from 'dotenv';
 const result = dotenv.config();
 
-// Debug environment loading
-console.log('Environment loading result:', result);
-console.log('NODE_ENV:', process.env.NODE_ENV);
-console.log('DEEPSEEK_API_KEY exists:', !!process.env.DEEPSEEK_API_KEY);
-console.log('PORT:', process.env.PORT);
-
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
@@ -21,6 +15,12 @@ import { codeRoutes } from './routes/code.js';
 const app = express();
 const logger = createLogger();
 const PORT = process.env.PORT || 3001;
+
+// Debug environment loading
+logger.info('Environment loading result:', result);
+logger.info('NODE_ENV:', process.env.NODE_ENV);
+logger.info('DEEPSEEK_API_KEY exists:', !!process.env.DEEPSEEK_API_KEY);
+logger.info('PORT:', process.env.PORT);
 
 // Security middleware
 app.use(helmet({
